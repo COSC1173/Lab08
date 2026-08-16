@@ -100,8 +100,7 @@ while (b != 0) {
 ## Compile, Run, and Test
 
 ```bash
-bash tools/run_lab.sh lab08          # 25 official checks
-python3 tools/comment_check.py labs/lab08
+
 ```
 
 ---
