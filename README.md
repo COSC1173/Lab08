@@ -61,8 +61,36 @@ answer is a.
 
 ```
 
-**Digit extraction.** `n % 10` yields the last digit; `n / 10` removes it (integer division):
+**Digit extraction.** The remainder after division by 10 is always the laster digit. `n % 10` yields the last digit;  `n / 10` removes it (integer division):
+Key Idea:
+At each step: 
+    1. Take the last digit from the number.
+    2. Add that digit to the end of the reversed number.
+    3. Remove the last digit from the original number.
+    4. Repeat until nothing is left.
+Example:
+    int n = 12345
+    
+    Get the last digit
+    n % 10
+    12345 % 10 = 5
+    
+    Remove the last digit
+    n / 10
+    12345 / 10 = 1234
+    1234 / 10 = 123
+    123 / 10 = 12
+    12 / 10 =1
+    1 / 10 =0
 
+    result = 0 * 10 + 5;
+
+    n = 1234
+    result = 5
+
+    1234 % 10 = 4
+    result = 5 * 10 +4
+    
 ```java
 int result = 0;
 while (n > 0) {
