@@ -37,7 +37,12 @@ not compile.
 answer is a.
 
 ** How the Algorithm Works
-
+For two numbers a and b (a > b):
+1. Divide a by a.
+2. Find the remainder r = a % b.
+3. Replace a with b and b with r.
+4. Repeat until r = 0.
+5. The last non-zero divisor is the GCD.
 
 | a | b | a % b |
 |---|---|---|
