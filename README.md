@@ -36,12 +36,30 @@ not compile.
 **Euclid's algorithm.** Repeatedly replace the pair (a, b) with (b, a mod b) until b is 0; the
 answer is a.
 
+** How the Algorithm Works
+
+
 | a | b | a % b |
 |---|---|---|
 | 48 | 18 | 12 |
 | 18 | 12 | 6 |
 | 12 | 6 | 0 |
 | 6 | 0 | — → answer is 6 |
+
+
+```java
+
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+
+```
 
 **Digit extraction.** `n % 10` yields the last digit; `n / 10` removes it (integer division):
 
