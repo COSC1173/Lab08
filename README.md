@@ -38,7 +38,7 @@ answer is a.
 
 ** How the Algorithm Works
 For two numbers a and b (a > b):
-1. Divide a by a.
+1. Divide a by b.
 2. Find the remainder r = a % b.
 3. Replace a with b and b with r.
 4. Repeat until r = 0.
